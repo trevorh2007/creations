@@ -11,7 +11,6 @@
 # config.setting_name = 'new value'
 Spree.config do |config|
   config.logo = "logo_white.png"
-  config.default_country_id = Spree::Country.find_by_iso("US").id
 end
 
 Spree.user_class = "Spree::User"
