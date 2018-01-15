@@ -8,3 +8,22 @@
  *= require_self
  *= require_tree .
 */
+@import "spree/frontend";
+
+.logo {
+  display: flex;
+  align-items: center;
+  .logo-text {
+    padding-left: 10px;
+    font-size: 30px;
+    font-family: 'Playball', cursive;
+    color: white;
+    &a {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
