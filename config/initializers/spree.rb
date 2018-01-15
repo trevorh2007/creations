@@ -10,7 +10,7 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
-  config.logo = "logo_white.png"
+  config.logo = "logo.png"
 end
 
 Spree.user_class = "Spree::User"

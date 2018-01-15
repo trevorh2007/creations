@@ -6,7 +6,7 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
-    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
@@ -14,6 +14,11 @@
     <%= render partial: 'spree/shared/header' %>
 
     <div class="container">
+              <%= image_tag(
+                    'background.png',
+                    id: 'background'
+                  )
+                  %>
       <div class="row" data-hook>
         <%= breadcrumbs(@taxon) %>
 

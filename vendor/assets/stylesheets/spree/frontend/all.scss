@@ -16,8 +16,10 @@
   .logo-text {
     padding-left: 10px;
     font-size: 30px;
-    font-family: 'Playball', cursive;
+    font-family: 'Allura', cursive;
     color: white;
+    white-space: nowrap;
+    width: 100%;
     &a {
       text-decoration: none;
     }
@@ -28,7 +30,7 @@
 }
 
 #spree-header #header {
-  background-color: #f71686;
+  background-color: #d11950;
 }
 
 #spree-header {
@@ -49,4 +51,21 @@
   background-color: #f71686;
   border-color: #ff66b2;
   color: white;
+}
+
+#logo img {
+  border-radius: 50%;
+}
+
+#background {
+  position: fixed;
+  top: 62%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
