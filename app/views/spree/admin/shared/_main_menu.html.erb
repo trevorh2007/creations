@@ -39,3 +39,9 @@
     <%= main_menu_tree Spree.t(:configurations), icon: "wrench", sub_menu: "configuration", url: "#sidebar-configuration" %>
   </ul>
 <% end %>
+
+<% if can? :admin, Spree::Blog %>
+  <ul class="nav nav-sidebar">
+    <%= main_menu_tree "Blog", icon: "pencil", sub_menu: "blog", url: "#sidebar-blog" %>
+  </ul>
+<% end %>
