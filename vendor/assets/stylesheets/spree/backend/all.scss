@@ -19,25 +19,29 @@ input[type="radio"] {
   margin: 0 5px 0 10px;
 }
 
-.card-link {
-  margin-right: 15px;
-  color: #d6e3b5;
-}
-
-.card-text {
-  height: 140px;
-  overflow: hidden;
-}
-.card-margin {
-  border: 1px solid $color-primary-dgreen;
-  padding: 15px;
-  margin: 5px 0;
-  height: 250px;
-  background: $color-primary-grey;
-  color: $color-primary-offwhite;
-}
-
 .px5-side-padding {
   padding-left: 5px !important;
   padding-right: 5px !important;
+  .card-margin {
+    border: 1px solid $color-primary-dgreen;
+    padding: 15px;
+    margin: 5px 0;
+    height: 250px;
+    background: $color-primary-grey;
+    color: $color-primary-offwhite;
+    .card-block {
+      .card-link {
+        margin-right: 15px;
+        color: #d6e3b5;
+        &:hover {
+          color: $color-primary-pink;
+          text-decoration: none;
+        }
+      }
+      .card-text {
+        height: 140px;
+        overflow: hidden;
+      }
+    }
+  }
 }
