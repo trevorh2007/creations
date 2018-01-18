@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       resources :blog
     end
 
-    # resources :blog
+    resources :blog
 
   end
 end
