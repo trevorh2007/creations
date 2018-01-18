@@ -16,9 +16,12 @@ Rails.application.routes.draw do
   # get '/admin/blog-edit', to: 'spree/admin/blogs#edit', as: 'blog_edit'
   # get '/admin/blogs', to: 'spree/admin/blogs#index', as: 'blog_index'
   Spree::Core::Engine.add_routes do
+
     namespace :admin do
       resources :blog
     end
-    resources :blog
+
+    # resources :blog
+
   end
 end

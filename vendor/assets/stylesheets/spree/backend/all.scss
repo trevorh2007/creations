@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require spree/backend
+
+ *= require_self
+ *= require_tree .
+*/
+
+$color-primary-pink: #ffc3ce;
+$color-primary-lgreen: #d6e3b5;
+$color-primary-dgreen: #6b824a;
+$color-primary-offwhite: #fff7ef;
+$color-primary-grey: #636563;
+
+input[type="radio"] {
+  margin: 0 5px 0 10px;
+}
+
+.card-link {
+  margin-right: 15px;
+  color: #d6e3b5;
+}
+
+.card-text {
+  height: 140px;
+  overflow: hidden;
+}
+.card-margin {
+  border: 1px solid $color-primary-dgreen;
+  padding: 15px;
+  margin: 5px 0;
+  height: 250px;
+  background: $color-primary-grey;
+  color: $color-primary-offwhite;
+}
+
+.px5-side-padding {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}

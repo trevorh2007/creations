@@ -1,2 +1,14 @@
-h3 the blog index route
-= @blogs
+h3.text-center All Blogs
+/ = render @blogs
+- @blogs.each do |b|
+  .col-sm-4.px5-side-padding
+    .card-margin
+      .card
+      .card-header
+        | Blog id: #{b.id}
+      .card-block
+        h4.card-title Title: #{b.title}
+        / h6.card-subtitle.mb-2.text-muted Card subtitle
+        p.card-text Body: #{b.body[0..229].gsub(/\s\w+\s*$/,'...')}
+        a.card-link href="#" Edit Blog
+        a.card-link href="#" Show

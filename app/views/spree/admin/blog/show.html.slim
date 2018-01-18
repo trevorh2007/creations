@@ -1,0 +1,11 @@
+.col-sm-8.blog-main
+  h2= @blog.title
+  / p= @blog.topic.title
+  = link_to 'Edit Blog', edit_blog_path(@blog), class: 'btn btn-sm btn-warning'
+  p
+    = markdown @blog.body
+  h5
+    = @blog.notes
+  / = render 'comments/comment_form'
+  / #comments data-blog-id="#{@blog.id}" 
+    = render @blog.comments

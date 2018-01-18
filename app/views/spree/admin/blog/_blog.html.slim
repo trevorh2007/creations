@@ -1,0 +1,11 @@
+.blog-post
+  h2.blog-post-title= link_to blog.title.capitalize, blog
+  p.blog-post-meta
+    | Published #{distance_of_time_in_words(blog.created_at, Time.now)} ago
+  / - if logged_in?(:site_admin)
+    / p.blog-post-meta
+      / = link_to blog.status, toggle_status_blog_path(blog), class: 'btn btn-sm btn-primary'
+      / = link_to 'Edit', edit_blog_path(blog), class: 'btn btn-sm btn-primary'
+      / = link_to 'Delete Blog', blog, class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Delete: #{blog.title}?", commit: 'Do it!', cancel: 'Not Yet' }
+  p
+    = blog.body

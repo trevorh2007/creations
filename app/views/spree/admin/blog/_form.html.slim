@@ -1,0 +1,25 @@
+= form_for @blog , url: admin_blog_index_path do |f|
+  / - if blog.errors.any?
+  /   - blog.errors.full_messages.each do |error|
+  /     = js add_gritter(error, title: "Trevor Howard Portfolio", sticky: false, image: :error)
+  .form-group
+    = f.text_field :title, class: 'form-control', placeholder: "Title"
+  / .form-group
+  /   = f.radio_button :status, 'Draft'
+  /   = f.label :status, 'Draft'
+  /   = f.radio_button :status, 'Published'
+  /   = f.label :status, 'Published'
+  / .form-group
+  /   = f.label :topic_id
+    / = f.collection_select(:topic_id, Topic.all, :id, :title, \
+    /     {                                                    \
+    /       include_blank: true                                \
+    /     },                                                   \
+    /     class: 'form-control'                                \
+    /   )                                                      \
+  .form-group
+    = f.text_area :body, class: 'form-control', placeholder: "Content", rows: 10
+  .form-group
+    = f.text_area :notes, class: 'form-control', placeholder: "Notes(optional)", rows: 5
+  .form-group
+    = f.submit 'Save', class: 'btn btn-primary'
